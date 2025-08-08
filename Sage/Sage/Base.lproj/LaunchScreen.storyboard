@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="IconeToSage" translatesAutoresizingMaskIntoConstraints="NO" id="onV-sI-rhq">
-                                <rect key="frame" x="-71" y="124" width="512" height="512"/>
+                                <rect key="frame" x="31" y="249" width="330" height="354"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -26,7 +26,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="379"/>
+            <point key="canvasLocation" x="58.778625954198468" y="378.87323943661971"/>
         </scene>
     </scenes>
     <resources>
