@@ -23,5 +23,8 @@ class ViewController: UIViewController {
        updateLabel.text = randomName.randomElement()
     }
 
+    @IBAction func setUpName(_ sender: Any) {
+        setUpdateLabel()
+    }
 }
 
