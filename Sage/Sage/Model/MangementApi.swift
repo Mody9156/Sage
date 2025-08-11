@@ -15,9 +15,7 @@ class MangementApi : ManagementProtocol{
         self.session = session
     }
     
-    static func sendQuote() -> (Data, URLResponse) {
-        <#code#>
-    }
+   
 
   
 }
