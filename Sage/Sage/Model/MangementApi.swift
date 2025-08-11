@@ -8,6 +8,16 @@
 import Foundation
 
 
-class MangementApi {
+class MangementApi : ManagementProtocol{
+       let session: URLSession
     
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
+    
+    static func sendQuote() -> (Data, URLResponse) {
+        <#code#>
+    }
+
+  
 }
