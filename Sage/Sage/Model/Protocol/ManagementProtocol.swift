@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ManagementProtocol {
-    
+   static func sendQuote(completion : @escaping ([Quote]?) -> Void)
 }
