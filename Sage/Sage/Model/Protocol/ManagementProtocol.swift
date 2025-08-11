@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ManagementProtocol {
-    static func sendQuote(request:URLRequest) -> (Data,URLResponse)
+    static func sendQuote(request:URLRequest) async throws -> (Data,URLResponse)
 }
