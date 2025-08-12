@@ -18,7 +18,7 @@ class CallQuoteWithHTTPClient {
         let url = URL(string: "https://zenquotes.io/api/quotes")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
         return request
     }
     
