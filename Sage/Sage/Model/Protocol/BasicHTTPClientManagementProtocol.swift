@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ManagementProtocol {
+protocol BasicHTTPClientManagementProtocol {
      func sendQuote(request:URLRequest) async throws -> (Data,URLResponse)
 }

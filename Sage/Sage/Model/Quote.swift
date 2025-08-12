@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Quote : Codable{
+struct Quote : Decodable{
     var Text : String
     var name : String
 }
