@@ -8,6 +8,11 @@
 import Foundation
 
 struct Quote : Decodable{
-    var Text : String
-    var name : String
+    let text : String
+    let name : String
+   
+    enum CodingKeys: String, CodingKey {
+        case text = "q"
+        case name = "a"
+    }
 }

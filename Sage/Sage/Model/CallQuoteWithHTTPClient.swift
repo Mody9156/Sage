@@ -8,16 +8,16 @@
 import Foundation
 
 class CallQuoteWithHTTPClient {
-    let session : BasicHTTPClient
+    let session : BasicHTTPClientManagementProtocol
     
-    init(session: BasicHTTPClient) {
+    init(session: BasicHTTPClientManagementProtocol = BasicHTTPClient()) {
         self.session = session
     }
     
     func callQuote() async throws -> URLRequest {
         let url = URL(string: "https://zenquotes.io/api/quotes")!
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         return request
     }
