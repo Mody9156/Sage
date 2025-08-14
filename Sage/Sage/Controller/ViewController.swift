@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var setButton: UIButton!
     @IBOutlet weak var updateLabelForShowName: UILabel!
     
+    @IBOutlet weak var fullLabel: UILabel!
+    @IBOutlet weak var showNumber: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,6 +27,8 @@ class ViewController: UIViewController {
             for i in quoteNa {
                 updateLabel.text = i.name
                 updateLabelForShowName.text = i.text
+                fullLabel.text = i.fullText
+                showNumber.numberOfLines = i.number
             }
             
         }catch{
