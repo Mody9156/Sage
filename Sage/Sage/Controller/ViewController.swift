@@ -28,7 +28,7 @@ class ViewController: UIViewController {
                 updateLabel.text = i.name
                 updateLabelForShowName.text = i.text
                 fullLabel.text = i.fullText
-                showNumber.numberOfLines = i.number
+                showNumber.text = i.number
             }
             
         }catch{

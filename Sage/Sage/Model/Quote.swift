@@ -11,7 +11,7 @@ struct Quote : Decodable{
     let text : String
     let name : String
     let fullText : String
-    let number : Int
+    let number : String
    
     enum CodingKeys: String, CodingKey {
         case text = "q"
