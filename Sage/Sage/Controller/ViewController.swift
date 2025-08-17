@@ -15,23 +15,33 @@ class ViewController: UIViewController {
     var array : [String:String] = [:]
     @IBOutlet weak var fullLabel: UILabel!
     @IBOutlet weak var showNumber: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        Task{
-            try await setUpdateLabel()
-        }
+        Task {
+              do {
+                  try await setUpdateLabel()
+                  
+                  if let randomQuote = array.randomElement() {
+                      updateLabel.text = randomQuote.key
+                      updateLabelForShowName.text =  randomQuote.value
+                  }
+                  
+              } catch {
+                  print(error.localizedDescription)
+              }
+          }
     }
 
     func setUpdateLabel() async throws {
         
         do{
-            let quoteNa =  try await quote.sendInformation()
-            print("arrayRandomNumberToValues:\(array.count)")
-            var arraySimple : [String:String] = [:]
-            for i in quoteNa{
-                arraySimple = [i.name:i.text]
-                array = arraySimple
+            let quoteRandom =  try await quote.sendInformation()
+      
+            for i in quoteRandom {
+
+                array[i.name] = i.text
                 
             }
             
@@ -41,12 +51,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func setUpName(_ sender: Any) {
+       
+        
         if let randomQuote = array.randomElement() {
-            let randomQuote = [randomQuote.key:randomQuote.value]
-            for (name,text) in randomQuote {
-                updateLabel.text = name
-                updateLabelForShowName.text =  text
-            }
+            updateLabel.text = randomQuote.key
+            updateLabelForShowName.text =  randomQuote.value
         }
        
      

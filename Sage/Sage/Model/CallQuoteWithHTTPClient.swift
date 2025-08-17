@@ -28,7 +28,6 @@ class CallQuoteWithHTTPClient {
         
         guard let HTTPResponse =  response as? HTTPURLResponse, HTTPResponse.statusCode == 200 else {return []}
         let encode = try JSONDecoder().decode([Quote].self, from: data)
-        print("encode: \(encode)")
         return encode
     }
 }
