@@ -12,23 +12,28 @@ class ViewController: UIViewController {
     let quote = CallQuoteWithHTTPClient()
     @IBOutlet weak var setButton: UIButton!
     @IBOutlet weak var updateLabelForShowName: UILabel!
-    
+    var array : [String:String] = [:]
     @IBOutlet weak var fullLabel: UILabel!
     @IBOutlet weak var showNumber: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        Task{
+            try await setUpdateLabel()
+        }
     }
 
     func setUpdateLabel() async throws {
-      
+        
         do{
             let quoteNa =  try await quote.sendInformation()
-            for i in quoteNa {
-                updateLabel.text = i.name
-                updateLabelForShowName.text = i.text
-                fullLabel.text = i.fullText
-                showNumber.text = i.number
+            print("arrayRandomNumberToValues:\(array.count)")
+        }
+            var arraySimple : [String:String] = [:]
+            for i in quoteNa{
+                arraySimple = [i.name:i.text]
+                array = arraySimple
+                
             }
             
         }catch{
@@ -37,9 +42,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func setUpName(_ sender: Any) {
-        Task { @MainActor in
-           try? await setUpdateLabel()
+        if let randomQuote = array.randomElement() {
+            let randomQuote = [randomQuote.key:randomQuote.value]
+            for (name,text) in randomQuote {
+                updateLabel.text = name
+                updateLabelForShowName.text =  text
+            }
         }
+       
+     
+        print("arrayRandomNumberToValues:\(array.count)")
     }
 }
 
