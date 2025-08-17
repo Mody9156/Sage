@@ -28,7 +28,6 @@ class ViewController: UIViewController {
         do{
             let quoteNa =  try await quote.sendInformation()
             print("arrayRandomNumberToValues:\(array.count)")
-        }
             var arraySimple : [String:String] = [:]
             for i in quoteNa{
                 arraySimple = [i.name:i.text]
