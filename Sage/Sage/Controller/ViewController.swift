@@ -33,7 +33,8 @@ class ViewController: UIViewController {
               }
           }
     }
-
+    
+    
     func setUpdateLabel() async throws {
         
         do{
@@ -61,5 +62,8 @@ class ViewController: UIViewController {
      
         print("arrayRandomNumberToValues:\(array.count)")
     }
+    
+    t
+    
 }
 
