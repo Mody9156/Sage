@@ -12,19 +12,41 @@ class ViewController: UIViewController {
     let quote = CallQuoteWithHTTPClient()
     @IBOutlet weak var setButton: UIButton!
     @IBOutlet weak var updateLabelForShowName: UILabel!
+    var array : [String:String] = [:]
+    @IBOutlet weak var fullLabel: UILabel!
+    @IBOutlet weak var showNumber: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        customLabel()
+        customName()
+        Task {
+              do {
+                  try await setUpdateLabel()
+                  
+                  if let randomQuote = array.randomElement() {
+                      updateLabel.text = randomQuote.key
+                      updateLabelForShowName.text =  randomQuote.value
+                  }
+                  
+              } catch {
+                  print(error.localizedDescription)
+              }
+          }
     }
-
+    
+    
     func setUpdateLabel() async throws {
-      
+        
         do{
-            let quoteNa =  try await quote.sendInformation()
-            for i in quoteNa {
-                updateLabel.text = i.name
-                updateLabelForShowName.text = i.text
+            let quoteRandom =  try await quote.sendInformation()
+      
+            for i in quoteRandom {
+
+                array[i.name] = i.text
+                
             }
             
         }catch{
@@ -33,9 +55,38 @@ class ViewController: UIViewController {
     }
 
     @IBAction func setUpName(_ sender: Any) {
-        Task { @MainActor in
-           try? await setUpdateLabel()
+       
+        if let randomQuote = array.randomElement() {
+            updateLabel.text = randomQuote.key
+            updateLabelForShowName.text =  randomQuote.value
         }
+       
+     
+        print("arrayRandomNumberToValues:\(array.count)")
+    }
+    
+    func customLabel() {
+        updateLabelForShowName.textColor = .white
+        updateLabelForShowName.textAlignment = .center
+        updateLabelForShowName.numberOfLines = 0
+        
+    }
+    
+    
+    func customName(){
+        updateLabel.textColor = .gray
+        updateLabel.textAlignment = .right
+        updateLabel.font = .preferredFont(forTextStyle: .subheadline)
+        
+    }
+    
+    func iconeForQuote() {
+        let img : UIImage =
+        UIImage(systemName: "quote.opening")!
+        
+        let img_two : UIImage =
+        UIImage(systemName: "quote.closing")!
     }
 }
+
 
