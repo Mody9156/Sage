@@ -67,9 +67,17 @@ class ViewController: UIViewController {
     
     func customLabel() {
         updateLabelForShowName.textColor = .white
-        updateLabelForShowName.textAlignment = .left
+        updateLabelForShowName.textAlignment = .center
         updateLabelForShowName.numberOfLines = 0
         
+    }
+    
+    func iconeForQuote() {
+        let img : UIImage =
+        UIImage(systemName: "quote.opening")!
+        
+        let img_two : UIImage =
+        UIImage(systemName: "quote.closing")!
     }
 }
 
