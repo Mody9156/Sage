@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        customLabel()
+        
         Task {
               do {
                   try await setUpdateLabel()
@@ -53,7 +56,6 @@ class ViewController: UIViewController {
 
     @IBAction func setUpName(_ sender: Any) {
        
-        
         if let randomQuote = array.randomElement() {
             updateLabel.text = randomQuote.key
             updateLabelForShowName.text =  randomQuote.value
@@ -63,7 +65,11 @@ class ViewController: UIViewController {
         print("arrayRandomNumberToValues:\(array.count)")
     }
     
-    t
-    
+    func customLabel() {
+        updateLabelForShowName.textColor = .white
+        updateLabelForShowName.textAlignment = .natural
+        
+    }
 }
+
 

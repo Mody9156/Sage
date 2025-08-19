@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
-
-class CustomText  {
-    
+class CustomText: ViewController {
+    private var customLabel = UILabel()
 }
+
+
