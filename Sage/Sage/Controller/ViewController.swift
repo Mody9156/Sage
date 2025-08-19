@@ -72,6 +72,11 @@ class ViewController: UIViewController {
         
     }
     
+    
+    func customName(){
+        
+    }
+    
     func iconeForQuote() {
         let img : UIImage =
         UIImage(systemName: "quote.opening")!
