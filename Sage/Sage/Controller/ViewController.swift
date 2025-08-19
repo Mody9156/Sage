@@ -67,7 +67,8 @@ class ViewController: UIViewController {
     
     func customLabel() {
         updateLabelForShowName.textColor = .white
-        updateLabelForShowName.textAlignment = .natural
+        updateLabelForShowName.textAlignment = .left
+        updateLabelForShowName.numberOfLines = 0
         
     }
 }
