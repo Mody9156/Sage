@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         customLabel()
-        
+        customName()
         Task {
               do {
                   try await setUpdateLabel()
@@ -74,6 +74,9 @@ class ViewController: UIViewController {
     
     
     func customName(){
+        updateLabel.textColor = .gray
+        updateLabel.textAlignment = .right
+        updateLabel.font = .preferredFont(forTextStyle: .subheadline)
         
     }
     
