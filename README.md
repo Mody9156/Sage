@@ -1,4 +1,6 @@
-# 🌿 Sage
+<div align="center">
+<img src="Screenshots/logo.png" alt="logo" width="150">
+</div>
 
 Une application iOS minimaliste en **UIKit** qui affiche des citations inspirantes.
     
