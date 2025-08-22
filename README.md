@@ -1,8 +1,10 @@
 # 🌿 Sage
 
 Une application iOS minimaliste en **UIKit** qui affiche des citations inspirantes.
-
-##Home screen
+    
+---   
+    
+## Home screen
 
 <p align="center">
 <img src="Screenshots/picture.png" width="200" alt="Home" >
@@ -10,6 +12,7 @@ Une application iOS minimaliste en **UIKit** qui affiche des citations inspirant
 
 
 ---
+
 ## Demo Video
 
 <div align="center">
