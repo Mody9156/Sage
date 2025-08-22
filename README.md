@@ -1,25 +1,24 @@
 <div align="center">
-<img src="Screenshots/logo.png" alt="logo" width="150">
+  <img src="Screenshots/logo.png" alt="logo" width="150">
 </div>
 
+# 🌿 Sage
+
 Une application iOS minimaliste en **UIKit** qui affiche des citations inspirantes.
-    
----   
-    
-## Home screen
-
-<p align="center">
-<img src="Screenshots/picture.png" width="200" alt="Home" >
-</p>
-
 
 ---
 
-## Demo Video
+## 📸 Aperçu
 
-<div align="center">
-<img src="Screenshots/gif_1.gif" alt="" width="500">
-</div>
+### 🏠 Home Screen
+<p align="center">
+  <img src="Screenshots/picture.png" width="200" alt="Home Screen">
+</p>
+
+### 🎥 Demo Video
+<p align="center">
+  <img src="Screenshots/gif_1.gif" alt="Demo Video" width="500">
+</p>
 
 ---
 
@@ -41,4 +40,4 @@ Une application iOS minimaliste en **UIKit** qui affiche des citations inspirant
 ## 🚀 Installation
 1. Clone le dépôt :
    ```bash
-   git clone https://github.com/KMIOS91/Sage
+   git clone https://github.com/KMIOS91/Sage.git
