@@ -3,7 +3,9 @@
 Une application iOS minimaliste en **UIKit** qui affiche des citations inspirantes.
 
 ![Banner](Screenshots/picture.png)  
-
+| <p align="center"><img src="SScreenshots/picture.png" width="200" alt="Home"></p> |
+|:---:|:---:|:---:|
+| **Home screen** |
 ---
 
 ## ✨ Fonctionnalités
