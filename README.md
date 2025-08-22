@@ -2,11 +2,20 @@
 
 Une application iOS minimaliste en **UIKit** qui affiche des citations inspirantes.
 
+##Home screen
+
 <p align="center">
 <img src="Screenshots/picture.png" width="200" alt="Home" >
 </p>
 
-**Home screen** 
+
+---
+## Demo Video
+
+<div align="center">
+<img src="Screenshots/gif.gif" alt="" width="500">
+</div>
+
 ---
 
 ## ✨ Fonctionnalités
