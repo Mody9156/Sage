@@ -13,7 +13,7 @@ Une application iOS minimaliste en **UIKit** qui affiche des citations inspirant
 ## Demo Video
 
 <div align="center">
-<img src="Screenshots/gif.gif" alt="" width="500">
+<img src="Screenshots/gif_1.gif" alt="" width="500">
 </div>
 
 ---
